@@ -9,6 +9,7 @@ set expandtab
 set ic        " ignore case
 set hls       " highligthning
 set is        " incsearch, show partial matches for a search phrase
+set number    " line numbers
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -18,6 +19,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
+Plugin 'nickez/epics.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " Brief help
