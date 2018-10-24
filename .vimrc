@@ -10,6 +10,11 @@ set ic        " ignore case
 set hls       " highligthning
 set is        " incsearch, show partial matches for a search phrase
 set number    " line numbers
+set hidden
+
+" statusline:
+set laststatus=2
+set statusline+=%F
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
