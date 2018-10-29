@@ -26,7 +26,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'altercation/vim-colors-solarized'
-"Plugin 'nickez/epics.vim'
+Plugin 'digitaltoad/vim-pug'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " Brief help
