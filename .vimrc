@@ -51,3 +51,21 @@ nnoremap <C-H> <C-W><C-H>
 
 " easy align plugin map,  e.g. usage: ga*&
 xmap ga <Plug>(EasyAlign)
+
+" ctrl-p plugin config:
+
+" Set no max file limit
+let g:ctrlp_max_files = 0
+" Search from current directory instead of project root
+let g:ctrlp_working_path_mode = 0
+
+" Ignore these directories
+set wildignore+=*/.git/**
+
+" Search in certain directories a large project (hardcoded for now)
+"cnoremap %proj <c-r>=expand('~/Projects/some-project')<cr>
+" ga = go api
+"map <Leader>gp :CtrlP %proj/api/<cr>
+" gf = go frontend
+"map <Leader>gf :CtrlP %proj/some/long/path/to/frontend/code/<cr>
+..
