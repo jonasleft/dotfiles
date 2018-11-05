@@ -1,3 +1,7 @@
+# include this git config in your main '.gitconfig' file like this:
+#[include]
+#  path = dotfiles/.gitconfig
+
 [core]
 	editor = vim
 [alias]
