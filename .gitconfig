@@ -1,0 +1,16 @@
+# include this git config in your main '.gitconfig' file like this:
+#[include]
+#  path = dotfiles/.gitconfig
+
+[core]
+	editor = vim
+[alias]
+  st = status
+  co = commit
+  pu = push
+	d  = diff
+	dt = difftool
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
