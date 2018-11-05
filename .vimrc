@@ -20,7 +20,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.vim/bundle/psi-epics.vim
 
 call vundle#begin()
-
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'jonasleft/psi-epics.vim'
@@ -31,14 +30,15 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'tpope/vim-surround'
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()           
+filetype plugin indent on 
 
 " Colorscheme, settings needed because of terminals
 syntax on
 let g:solarized_termcolors=256
 set t_Co=256 
 set background=dark
+
 colorscheme desert
 
 " change search highlightning:
