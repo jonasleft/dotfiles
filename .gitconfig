@@ -1,0 +1,12 @@
+[core]
+	editor = vim
+[alias]
+  st = status
+  co = commit
+  pu = push
+	d  = diff
+	dt = difftool
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
