@@ -26,9 +26,11 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'jonasleft/psi-epics.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'tpope/vim-surround'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -52,8 +54,10 @@ nnoremap <C-H> <C-W><C-H>
 " easy align plugin map,  e.g. usage: ga*&
 xmap ga <Plug>(EasyAlign)
 
-" ctrl-p plugin config:
+" NERDTree config:
+map <C-n> :NERDTreeToggle<CR>
 
+" ctrl-p plugin config:
 " Set no max file limit
 let g:ctrlp_max_files = 0
 " Search from current directory instead of project root
@@ -68,4 +72,3 @@ set wildignore+=*/.git/**
 "map <Leader>gp :CtrlP %proj/api/<cr>
 " gf = go frontend
 "map <Leader>gf :CtrlP %proj/some/long/path/to/frontend/code/<cr>
-..
