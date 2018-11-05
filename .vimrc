@@ -68,4 +68,3 @@ set wildignore+=*/.git/**
 "map <Leader>gp :CtrlP %proj/api/<cr>
 " gf = go frontend
 "map <Leader>gf :CtrlP %proj/some/long/path/to/frontend/code/<cr>
-..
