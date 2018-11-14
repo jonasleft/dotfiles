@@ -1,3 +1,7 @@
+" source in main vimrc with: 'so ~/dotfiles/.vimrc'
+" clone vundle with:
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim  
+
 set nocompatible
 filetype off
 
@@ -84,3 +88,4 @@ nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-ö> :TmuxNavigatePrevious<cr>
 
+set clipboard=unnamed
