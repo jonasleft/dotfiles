@@ -7,7 +7,8 @@ filetype off
 
 set tabstop=2
 set shiftwidth=2
-"set expandtab
+set expandtab
+
 set ic        " ignore case
 set hls       " highligthning
 set is        " incsearch, show partial matches for a search phrase
@@ -87,5 +88,9 @@ nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-ö> :TmuxNavigatePrevious<cr>
+
+" Search in files:
+let mapleader = "ü"
+nnoremap <Leader>f :execute "vimgrep /" . expand("<cword>") . "/j *" <Bar> cw<CR>
 
 set clipboard=unnamed
