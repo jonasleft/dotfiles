@@ -49,7 +49,7 @@ colorscheme desert
 
 " change search highlightning:
 hi Search ctermbg=LightYellow
-hi Search ctermfg=Red
+hi Search ctermfg=DarkGray
 
 " window navigation map:
 nnoremap <C-J> <C-W><C-J>
@@ -92,5 +92,5 @@ nnoremap <silent> <c-ö> :TmuxNavigatePrevious<cr>
 " Search in files:
 let mapleader = "ü"
 nnoremap <Leader>f :execute "vimgrep /" . expand("<cword>") . "/j *" <Bar> cw<CR>
-
+set nowrap
 set clipboard=unnamed
