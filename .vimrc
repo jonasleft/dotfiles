@@ -36,6 +36,7 @@ Plugin 'digitaltoad/vim-pug'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'tpope/vim-surround'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'ludovicchabant/vim-gutentags'
 call vundle#end()           
 filetype plugin indent on 
 
