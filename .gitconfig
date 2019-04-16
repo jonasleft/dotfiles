@@ -3,14 +3,18 @@
 #  path = dotfiles/.gitconfig
 
 [core]
-	editor = vim
+  editor = vim
+  excludesfile = .gitignore_global
 [alias]
-  st = status
+  st = status -s
   co = commit
   pu = push
-	d  = diff
-	dt = difftool
+  d  = diff
+  dt = difftool
+  lg = log --decorate --graph --pretty=tformat:'%C(dim white)%m%C(dim green)%h %C(dim cyan)%cd %C(yellow)%<(12,trunc)%aN %C(reset)%s%C(auto)%w(0,0,9)%+d%C(reset)' --decorate --graph
+[log]
+  date = format:%Y-%m-%d %H:%M
 [diff]
-	tool = vimdiff
+  tool = vimdiff
 [difftool]
-	prompt = false
+  prompt = false
