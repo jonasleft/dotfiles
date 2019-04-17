@@ -11,10 +11,19 @@
   pu = push
   d  = diff
   dt = difftool
-  lg = log --decorate --graph --pretty=tformat:'%C(dim white)%m%C(dim green)%h %C(dim cyan)%cd %C(yellow)%<(12,trunc)%aN %C(reset)%s%C(auto)%w(0,0,9)%+d%C(reset)' --decorate --graph
+  lg = log --decorate --graph --remotes --branches --tags --pretty=tformat:'%C(dim white)%m%C(dim green)%h %C(dim cyan)%cd %C(yellow)%<(12,trunc)%aN %C(reset)%s%C(auto)%w(0,0,9)%+d%C(reset)'
+  # merge manually:
+  mm = merge --no-commit --no-ff 
 [log]
   date = format:%Y-%m-%d %H:%M
 [diff]
   tool = vimdiff
+[merge]
+  tool = vimdiff
+  conflictstyle = diff3
+[mergetool]
+  prompt = false
 [difftool]
   prompt = false
+  # be able to abort all diffs with :cq
+  trustExitcode =true
