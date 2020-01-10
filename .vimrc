@@ -27,9 +27,12 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'kien/ctrlp.vim'
+"Plugin 'kien/ctrlp.vim'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
+"Plugin 'lifepillar/vim-solarized8'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'tpope/vim-surround'
@@ -62,21 +65,20 @@ xmap ga <Plug>(EasyAlign)
 " NERDTree config:
 map <C-n> :NERDTreeToggle<CR>
 
-" ctrl-p plugin config:
-" Set no max file limit
-let g:ctrlp_max_files = 0
-" Search from current directory instead of project root
-let g:ctrlp_working_path_mode = 0
+" FZF config:
+" -----------
+:let mapleader = "\<Space>"
+let g:fzf_action = {
+      \ 'ctrl-s': 'split',
+      \ 'ctrl-v': 'vsplit'
+      \ }
+nnoremap <c-p> :FZF<cr>
+nnoremap <silent> <leader><space> :Files<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <leader>g :Rg<CR>
 
 " Ignore these directories
 set wildignore+=*/.git/**
-
-" Search in certain directories a large project (hardcoded for now)
-"cnoremap %proj <c-r>=expand('~/Projects/some-project')<cr>
-" ga = go api
-"map <Leader>gp :CtrlP %proj/api/<cr>
-" gf = go frontend
-"map <Leader>gf :CtrlP %proj/some/long/path/to/frontend/code/<cr>
 
 " Vim Tmux Navigator Plugin config:
 "----------------------------------
@@ -89,8 +91,8 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-ö> :TmuxNavigatePrevious<cr>
 
 " Search in files:
-let mapleader = "ü"
-nnoremap <Leader>f :execute "vimgrep /" . expand("<cword>") . "/j *" <Bar> cw<CR>
+" let mapleader = "ü"
+" nnoremap <Leader>f :execute "vimgrep /" . expand("<cword>") . "/j *" <Bar> cw<CR>
 set nowrap
 set clipboard=unnamed
 
@@ -107,3 +109,12 @@ highlight diffAdded   term=bold ctermbg=black   ctermfg=green  cterm=bold guibg=
 highlight diffChanged term=bold ctermbg=black   ctermfg=yellow cterm=bold guibg=DarkYellow  guifg=white gui=none
 highlight diffLine    term=bold ctermbg=magenta ctermfg=white  cterm=bold guibg=DarkMagenta guifg=white gui=none
 highlight diffFile    term=bold ctermbg=yellow  ctermfg=black  cterm=none guibg=DarkYellow  guifg=white gui=none
+
+" Macros
+" -----------------------
+" Increment numbers in a column:
+let @i = 'yiwjciw0'
+
+" grep current word from current directory:
+:nnoremap gR :grep "\<<cword>\>" %:p:h/*<CR>
+
