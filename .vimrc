@@ -27,7 +27,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-"Plugin 'kien/ctrlp.vim'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'scrooloose/nerdtree'
@@ -117,4 +116,9 @@ let @i = 'yiwjciw0'
 
 " grep current word from current directory:
 :nnoremap gR :grep "\<<cword>\>" %:p:h/*<CR>
+
+" White spaces
+" ------------
+set listchars=tab:>~,nbsp:_,trail:.
+set list
 
