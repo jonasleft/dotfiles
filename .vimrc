@@ -29,6 +29,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+Plugin 'SirVer/ultisnips'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 "Plugin 'lifepillar/vim-solarized8'
@@ -73,6 +74,8 @@ let g:fzf_action = {
       \ }
 nnoremap <c-p> :FZF<cr>
 nnoremap <silent> <leader><space> :Files<CR>
+nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>F :GFiles<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>g :Rg<CR>
 
