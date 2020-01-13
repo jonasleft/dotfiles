@@ -18,7 +18,9 @@ set hidden
 " statusline:
 set laststatus=2
 set statusline=%F
-
+set statusline+=%=    " switch to right side
+set statusline+=%{FugitiveStatusline()}\ \|
+set statusline+=\ %l,%c
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -70,7 +72,8 @@ map <C-n> :NERDTreeToggle<CR>
 :let mapleader = "\<Space>"
 let g:fzf_action = {
       \ 'ctrl-s': 'split',
-      \ 'ctrl-v': 'vsplit'
+      \ 'ctrl-v': 'vsplit',
+      \ 'ctrl-t': 'tabedit'
       \ }
 nnoremap <c-p> :FZF<cr>
 nnoremap <silent> <leader><space> :Files<CR>
@@ -78,6 +81,7 @@ nnoremap <silent> <leader>f :Files<CR>
 nnoremap <silent> <leader>F :GFiles<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>g :Rg<CR>
+nnoremap <silent> <leader>t :Tags<CR>
 
 " Ignore these directories
 set wildignore+=*/.git/**
