@@ -83,6 +83,14 @@ nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>g :Rg<CR>
 nnoremap <silent> <leader>t :Tags<CR>
 
+" UltiSnips :
+" -----------
+let g:UltiSnipsSnippetDirectories=[$HOME.'/dotfiles/snippets']
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<S-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-l>"
+let g:UltiSnipsJumpBackwardTrigger="<c-h>"
+
 " Ignore these directories
 set wildignore+=*/.git/**
 
