@@ -12,7 +12,12 @@
   d  = diff
   dt = difftool
   lg = log --decorate --graph --remotes --branches --tags --pretty=tformat:'%C(dim white)%m%C(dim green)%h %C(dim cyan)%cd %C(yellow)%<(12,trunc)%aN %C(reset)%s%C(auto)%w(0,0,9)%+d%C(reset)'
-  fadd = "!git ls-files -m -o --exclude-standard | fzf --print0 -m --preview=\"printenv\" | xargs -0 -t -o git add"
+  fadd = "!f() { \
+       git ls-files -m --exclude-standard | \
+       fzf --print0 -m --preview='git diff --color=always {}' | \
+       xargs -0 -t -o git add; \
+       }; f"
+
   ls = "!git ls-tree --full-tree -r --name-only HEAD"
 
   # merge manually:
