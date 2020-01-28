@@ -14,6 +14,7 @@ set hls       " highligthning
 set is        " incsearch, show partial matches for a search phrase
 set number    " line numbers
 set hidden
+syntax on
 
 " statusline:
 set laststatus=2
@@ -33,8 +34,8 @@ Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'scrooloose/nerdtree'
-Plugin 'altercation/vim-colors-solarized'
-"Plugin 'lifepillar/vim-solarized8'
+"Plugin 'altercation/vim-colors-solarized'
+Plugin 'lifepillar/vim-solarized8'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'tpope/vim-surround'
@@ -44,12 +45,18 @@ call vundle#end()
 filetype plugin indent on 
 
 " Colorscheme, settings needed because of terminals
-syntax on
-let g:solarized_termcolors=256
-set t_Co=256 
+
+" This is only necessary if you use termguicolors:
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+set termguicolors
+set t_Co=256
 set background=dark
 
-colorscheme desert
+let g:solarized_termcolors=256
+
+ colorscheme solarized8
 
 " change search highlightning:
 hi Search ctermbg=LightYellow
