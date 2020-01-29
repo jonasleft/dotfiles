@@ -54,9 +54,9 @@ set termguicolors
 set t_Co=256
 set background=dark
 
-let g:solarized_termcolors=256
+colorscheme solarized8
+"let g:solarized_termcolors=256
 
- colorscheme solarized8
 
 " change search highlightning:
 hi Search ctermbg=LightYellow
