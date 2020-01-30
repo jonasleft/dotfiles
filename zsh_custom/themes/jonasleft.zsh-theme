@@ -1,4 +1,8 @@
 HOST_PROMPT="%{$fg_bold[yellow]%}$HOST"
+
+local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+RPS1='$(vi_mode_prompt_info) ${return_code}'
+
 PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 PROMPT+=' $HOST_PROMPT:%{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
 
