@@ -1,0 +1,13 @@
+= Git Cheatsheet =
+
+== Merge Conflicts ==
+
+  * `git reset HEAD -- <file>`
+  * `git checkout --ours -- <file>`
+
+=== Git mergetool with vim ===
+
+  * get changes from remote / local /base: `:diffge RE / LO / BA`
+  * next / previous change: `[c` and `]c`
+  * quits vim with error, for not resolved merge: `:cq`
+

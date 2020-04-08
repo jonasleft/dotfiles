@@ -40,6 +40,7 @@ Plugin 'digitaltoad/vim-pug'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'tpope/vim-surround'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'vimwiki/vimwiki'
 "Plugin 'jonasleft/psi-epics.vim'
 call vundle#end()           
 filetype plugin indent on 
@@ -130,6 +131,10 @@ highlight diffAdded   term=bold ctermbg=black   ctermfg=green  cterm=bold guibg=
 highlight diffChanged term=bold ctermbg=black   ctermfg=yellow cterm=bold guibg=DarkYellow  guifg=white gui=none
 highlight diffLine    term=bold ctermbg=magenta ctermfg=white  cterm=bold guibg=DarkMagenta guifg=white gui=none
 highlight diffFile    term=bold ctermbg=yellow  ctermfg=black  cterm=none guibg=DarkYellow  guifg=white gui=none
+
+" vimwiki settings:
+" -----------------
+let g:vimwiki_list = [{'path': '~/dotfiles/vimwiki'}]
 
 " Macros
 " -----------------------
