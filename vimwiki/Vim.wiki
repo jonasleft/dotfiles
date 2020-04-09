@@ -6,4 +6,20 @@
 
   * create table with 5 columns, 2 rows: `:VimwikiTable 5 3`
   * Toggle [ ] todo list: `<C-Shift-Space>`
+
+== easyAlign ==
+
+  *align visual selection:*
+
+  *  all '|'  `ga*=`
+
+  *align normal mode:*
+
+  *  all '|'  `gaip*=`
+
+  *align colon ':' with margin*
   
+  1. sequence: `ga*`
+  2. <right arrow>
+  3. `:`
+
