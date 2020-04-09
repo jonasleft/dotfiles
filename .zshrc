@@ -19,3 +19,9 @@ KEYTIMEOUT=1
 # ------------------------------------
 
 alias -s pdf=FoxitReader
+
+# xclip:
+alias c='xclip -selection clipboard'
+alias v='xclip -selection clipboard -o'
+alias cdv='cd `xclip -selection clipboard -o`'
+
