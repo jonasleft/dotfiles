@@ -1,0 +1,9 @@
+= VIM =
+
+== vimwiki ==
+
+  * Tricks: https://mkaz.blog/working-with-vim/vimwiki/
+
+  * create table with 5 columns, 2 rows: `:VimwikiTable 5 3`
+  * Toggle [ ] todo list: `<C-Shift-Space>`
+  
