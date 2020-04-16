@@ -6,4 +6,4 @@
 
   * create table with 5 columns, 2 rows: `:VimwikiTable 5 3`
   * Toggle [ ] todo list: `<C-Shift-Space>`
-  
+
