@@ -23,5 +23,7 @@ alias -s pdf=FoxitReader
 # xclip:
 alias c='xclip -selection clipboard'
 alias v='xclip -selection clipboard -o'
+# change to clipboard directory:
 alias cdv='cd `xclip -selection clipboard -o`'
-
+# change to git root directory:
+alias cdg='cd $(git rev-parse --show-toplevel)'

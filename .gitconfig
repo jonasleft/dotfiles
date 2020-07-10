@@ -20,6 +20,7 @@
        }; f"
 
   ls = "ls-tree --full-tree -r --name-only HEAD"
+  # print git root directory:
   root = rev-parse --show-toplevel
   # print latest hash on remote. do a "git remote update && git fetch" or "git fetch -all" first!
   remotehash = "!git rev-parse `git branch -r --sort=committerdate | tail -1`"

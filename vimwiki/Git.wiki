@@ -5,9 +5,44 @@
   * `git reset HEAD -- <file>`
   * `git checkout --ours -- <file>`
 
-=== Git mergetool with vim ===
+== Git mergetool with vim ==
 
-  * get changes from remote / local /base:        `:diffge RE / LO / BA`
+  `+-------+------+--------+`
+  `| LOCAL | BASE | REMOTE |`
+  `+-------+------+--------+`
+  `|                       |`
+  `|        MERGED         |`
+  `|                       |`
+  `+-----------------------+`
+
+  LOCAL   - file from the current branch
+  BASE    - common ancestor, how file looked before both changes
+  REMOTE  - file you are merging into your branch
+  MERGED  - merge result, --> this is what gets saved in the repo
+
+
+  * get the changes from remote / local /base:        `:diffge RE / LO / BA`
   * next / previous change:                       `[c` and `]c`
   * quits vim with error, for not resolved merge: `:cq`
 
+== Update all submodules ==
+ * iterate submodules:          `git submodule foreach git fetch --all`
+ * only first time:             `git submodule update --init --recursive`
+ * update all to new commits:   `git submodule update --recursive --remote`
+ * update all to repo hash:     `git submodule update`
+
+== Remove submodule ==
+  1. Remove the submodule entry from .git/config:
+    `git submodule deinit -f path/to/submodule`
+
+  2. Remove the submodule directory from the superproject's .git/modules directory:
+     `rm -rf .git/modules/path/to/submodule`
+
+  3. Remove the entry in .gitmodules and remove the submodule directory located at path/to/submodule
+     `git rm -f path/to/submodule`
+
+== Git Merge dry run ==
+  * run merge without ff and commits:   `git merge --no-commit -- no-ff <branch>`
+  * examine the staged changes:         `git diff --cached`
+  * undo the merge (even if ff)         `git merge --abort`
+ 
