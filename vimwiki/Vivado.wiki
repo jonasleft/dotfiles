@@ -1,25 +1,30 @@
 = Vivado =
 
-== Console Mode ==
+  == Console Mode ==
 
-  * Run vivado in console mode: `$ vivado -mode tcl`
-  * compile sim libs:           `compile_simlib -simulator modelsim -directory /opt/xilinx_lib`
+    * Run vivado in console mode: `$ vivado -mode tcl`
+    * compile sim libs:           `compile_simlib -simulator modelsim -directory /opt/xilinx_lib`
 
-== TCL Snippets ==
+  == TCL Snippets ==
 
-  * list all constraints files:   `report_compile_order -constraints`
-  * create project tcl file:      `write_project_tcl -paths_relative_to . -force project.tcl`
-  * ressource utilization report: `report_utilization -hierarchical -hierarchical_depth 4`
-  * `write_xdc`
-
-
-== synthesis / implementation ==
-
-  * Threads used for synthesis: `set_param general.maxThreads 3`
-
-=== Read elapsed time ===
-
- * `get_property STATS.ELAPSED [get_runs synth_1]`
- * `get_property STATS.ELAPSED [get_runs impl_1]`
+    * list all constraints files:   `report_compile_order -constraints`
+    * create project tcl file:      `write_project_tcl -paths_relative_to . -force project.tcl`
+    * ressource utilization report: `report_utilization -hierarchical -hierarchical_depth 4`
+    * `write_xdc`
 
 
+  == synthesis / implementation ==
+
+    * Threads used for synthesis: `set_param general.maxThreads 3`
+
+    === Read elapsed time ===
+
+      * `get_property STATS.ELAPSED [get_runs synth_1]`
+      * `get_property STATS.ELAPSED [get_runs impl_1]`
+
+  == hw_server ==
+  
+    * Windows: `C:\Xilinx\Vivado\2018.2\bin\hw_server.bat`
+    * Linux:   `/opt/Xilinx/Vivado/2018.2/bin/hw_server`
+    * default port: `3121`
+  

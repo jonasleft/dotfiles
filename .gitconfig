@@ -8,6 +8,7 @@
 [alias]
   st = status -s
   co = commit
+  com = commit -m
   pu = push
   d  = diff
   dt = difftool
@@ -18,10 +19,29 @@
        xargs -0 -t -o git add; \
        }; f"
 
-  ls = "!git ls-tree --full-tree -r --name-only HEAD"
+  ls = "ls-tree --full-tree -r --name-only HEAD"
+  # print git root directory:
+  root = rev-parse --show-toplevel
+  # print latest hash on remote. do a "git remote update && git fetch" or "git fetch -all" first!
+  remotehash = "!git rev-parse `git branch -r --sort=committerdate | tail -1`"
+  # print current hash
+  hash = rev-parse HEAD
+  # print current branch
+  branchname = rev-parse --abbrev-ref HEAD
 
-  # merge manually:
-  mm = merge --no-commit --no-ff 
+  # Check if current checkout is behind:
+  isbehind = "!f() { \
+              if [ $(git hash) = $(git remotehash) ]; then echo LATEST; else echo \"OLD \\032 \\032 \\032  \" ; fi; \
+               }; f"
+
+  # fetch all from all submodules:
+  sfetch =  "submodule foreach git fetch --all"
+  # check all submodules of checkout is behind: 
+  scheck =  "submodule foreach --quiet 'echo `git isbehind` `git branchname`  $name'"
+
+  # merge dry run: (abort with: git merge --abort)
+  mergedry = merge --no-commit --no-ff 
+
 [log]
   date = format:%Y-%m-%d %H:%M
 [diff]
