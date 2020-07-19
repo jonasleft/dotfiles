@@ -1,4 +1,5 @@
 = VIM =
+:vim:
 
 == vimwiki ==
 
@@ -23,3 +24,12 @@
   2. <right arrow>
   3. `:`
 
+== surround ==
+
+  | `cs"'`  | change `"` to `'`                        |
+  | `ds"`   | remove `"`                               |
+  | `ysiw]` | surround current word with  `]`          |
+  | `S)`    | visual mode: surround selection with `)` |
+
+
+ == CTags ==

@@ -7,7 +7,7 @@
 
 == Cheatsheets ==
   * [[Git]]: tricks, snippets
-  * [[Vim]]: tricks, snippes
+  * [[Vim]]: tricks, snippets
   * 
 
 = Todo List =
