@@ -1,6 +1,6 @@
 " source in main vimrc with: 'so ~/dotfiles/.vimrc'
 " clone vundle with:
-" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim  
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 set nocompatible
 filetype off
@@ -14,14 +14,15 @@ set hls       " highligthning
 set is        " incsearch, show partial matches for a search phrase
 set number    " line numbers
 set hidden
+set cursorline  " highlight cursor
 syntax on
 
 " statusline:
-set laststatus=2
-set statusline=%F
-set statusline+=%=    " switch to right side
-set statusline+=%{FugitiveStatusline()}\ \|
-set statusline+=\ %l,%c
+"set laststatus=2
+"set statusline=%F
+"set statusline+=%=    " switch to right side
+"set statusline+=%{FugitiveStatusline()}\ \|
+"set statusline+=\ %l,%c
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -41,21 +42,31 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'tpope/vim-surround'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'vimwiki/vimwiki'
+Plugin 'arcticicestudio/nord-vim'
+Plugin 'vim-airline/vim-airline'
 "Plugin 'jonasleft/psi-epics.vim'
-call vundle#end()           
-filetype plugin indent on 
+call vundle#end()
+filetype plugin indent on
 
 " Colorscheme, settings needed because of terminals
 
 " This is only necessary if you use termguicolors:
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+"let g:nord_italic = 1
+"let g:nord_italic_comments = 1
+"let g:nord_underline = 1
+"let g:nord_uniform_status_lines = 1
+"let g:nord_uniform_diff_background = 1
+"let g:nord_cursor_line_number_background = 1
 
+"set t_ut=
 set termguicolors
-set t_Co=256
-set background=dark
+"set t_Co=256
+"set background=dark
 
-colorscheme solarized8
+"colorscheme solarized8
+colorscheme nord
 "let g:solarized_termcolors=256
 
 
@@ -125,16 +136,16 @@ set clipboard=unnamed
 " vimdiff settings:
 " -----------------
 " When using vimdiff or diff mode
-highlight DiffAdd    term=bold         ctermbg=darkgreen ctermfg=white    cterm=bold guibg=DarkGreen  guifg=White    gui=bold
-highlight DiffText   term=reverse,bold ctermbg=red       ctermfg=yellow   cterm=bold guibg=DarkRed    guifg=yellow   gui=bold
-highlight DiffChange term=bold         ctermbg=black     ctermfg=white    cterm=bold guibg=Black      guifg=White    gui=bold
-highlight DiffDelete term=none         ctermbg=darkblue  ctermfg=darkblue cterm=none guibg=DarkBlue   guifg=DarkBlue gui=none
+" highlight DiffAdd    term=bold         ctermbg=darkgreen ctermfg=white    cterm=bold guibg=DarkGreen  guifg=White    gui=bold
+" highlight DiffText   term=reverse,bold ctermbg=red       ctermfg=yellow   cterm=bold guibg=DarkRed    guifg=yellow   gui=bold
+" highlight DiffChange term=bold         ctermbg=black     ctermfg=white    cterm=bold guibg=Black      guifg=White    gui=bold
+" highlight DiffDelete term=none         ctermbg=darkblue  ctermfg=darkblue cterm=none guibg=DarkBlue   guifg=DarkBlue gui=none
 " When viewing a diff or patch file
-highlight diffRemoved term=bold ctermbg=black   ctermfg=red    cterm=bold guibg=DarkRed     guifg=white gui=none
-highlight diffAdded   term=bold ctermbg=black   ctermfg=green  cterm=bold guibg=DarkGreen   guifg=white gui=none
-highlight diffChanged term=bold ctermbg=black   ctermfg=yellow cterm=bold guibg=DarkYellow  guifg=white gui=none
-highlight diffLine    term=bold ctermbg=magenta ctermfg=white  cterm=bold guibg=DarkMagenta guifg=white gui=none
-highlight diffFile    term=bold ctermbg=yellow  ctermfg=black  cterm=none guibg=DarkYellow  guifg=white gui=none
+" highlight diffRemoved term=bold ctermbg=black   ctermfg=red    cterm=bold guibg=DarkRed     guifg=white gui=none
+" highlight diffAdded   term=bold ctermbg=black   ctermfg=green  cterm=bold guibg=DarkGreen   guifg=white gui=none
+" highlight diffChanged term=bold ctermbg=black   ctermfg=yellow cterm=bold guibg=DarkYellow  guifg=white gui=none
+" highlight diffLine    term=bold ctermbg=magenta ctermfg=white  cterm=bold guibg=DarkMagenta guifg=white gui=none
+" highlight diffFile    term=bold ctermbg=yellow  ctermfg=black  cterm=none guibg=DarkYellow  guifg=white gui=none
 
 " vimwiki settings:
 " -----------------

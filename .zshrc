@@ -13,6 +13,9 @@ KEYTIMEOUT=1
 # enable vi mode (already enabled with ohmyzsh plugins):
 #bindkey -v
 
+# load nord theme dir colords:
+ln -sfr ~/dotfiles/.dir_colors ~/.dir_colors
+eval $(dircolors ~/.dir_colors)
 
 # ------------------------------------
 # Aliases:

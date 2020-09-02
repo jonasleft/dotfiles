@@ -45,4 +45,7 @@
   * run merge without ff and commits:   `git merge --no-commit -- no-ff <branch>`
   * examine the staged changes:         `git diff --cached`
   * undo the merge (even if ff)         `git merge --abort`
- 
+
+= Links =
+ * https://chris.beams.io/posts/git-commit/
+ * 
