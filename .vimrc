@@ -44,6 +44,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'vimwiki/vimwiki'
 Plugin 'arcticicestudio/nord-vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 "Plugin 'jonasleft/psi-epics.vim'
 call vundle#end()
 filetype plugin indent on
