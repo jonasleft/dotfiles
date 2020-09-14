@@ -10,10 +10,7 @@
 == Cheatsheets ==
   * [[Git]]: tricks, snippets
   * [[Vim]]: tricks, snippets
-  * 
-
-= Todo List =
-  * [[todo]] 
+  * [[Zsh]]
 
 
 

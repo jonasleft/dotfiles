@@ -1,0 +1,24 @@
+RESET-DB0   0x90
+RESET-DB1   0x94
+
+PARAMBASE_APPL
+0x00020010
+
+
+= DBPM3 =
+
+* SwissFEL IOC: S30-CVME-DBPM4103
+* Test Stand IOC: MTEST-VME-DIAG17
+
+== Xilinx HW Server ==
+ * pc8791 (swissFEL)
+ * pc6601 (?)
+ * pc11094 (windows, WLHA)
+
+= Meetings =
+
+== Electronics Meeting 20. Aug. ==
+
+- Prepare for swissFEL test (records, firmware package)
+- Run Test on multiple DBPM3s 
+

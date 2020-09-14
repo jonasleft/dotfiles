@@ -151,7 +151,10 @@ set clipboard=unnamed
 
 " vimwiki settings:
 " -----------------
-let g:vimwiki_list = [{'path': '~/dotfiles/vimwiki'}]
+let g:vimwiki_list = [
+                      \{'path': '~/dotfiles/vimwiki'},
+                      \{'path': '~/psi_dotfiles/vimwiki'}
+                      \]
 
 " Macros
 " -----------------------
