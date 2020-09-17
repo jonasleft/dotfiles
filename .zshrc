@@ -17,6 +17,8 @@ KEYTIMEOUT=1
 ln -sfr ~/dotfiles/.dir_colors ~/.dir_colors
 eval $(dircolors ~/.dir_colors)
 
+# change capslock to esc key:
+setxkbmap -option caps:escape
 # ------------------------------------
 # Aliases:
 # ------------------------------------
