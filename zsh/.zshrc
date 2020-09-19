@@ -1,8 +1,8 @@
-source ~/dotfiles/func.zsh
+source ~/dotfiles/zsh/func.zsh
 
 # Oh My Zsh Setup:
-export ZSH=~/dotfiles/.oh-my-zsh
-ZSH_CUSTOM=~/dotfiles/zsh_custom
+export ZSH=~/dotfiles/zsh/.oh-my-zsh
+ZSH_CUSTOM=~/dotfiles/zsh/zsh_custom
 ZSH_THEME="jonasleft"
 
 plugins=(git extract jump z fzf)
@@ -16,7 +16,6 @@ KEYTIMEOUT=1
 #bindkey -v
 
 # load nord theme dir colords:
-ln -sfr ~/dotfiles/.dir_colors ~/.dir_colors
 eval $(dircolors ~/.dir_colors)
 
 # change capslock to esc key:
