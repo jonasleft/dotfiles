@@ -26,6 +26,8 @@ source ~/dotfiles/.zshrc
 
 ```
 
+
+
 # Additional Tools/Software
 
 ## Shell
@@ -46,4 +48,13 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 sudo python3 -m pip install pyqt5==5.14  # ubuntu 18.04 reports error if version is not specified...?
 pip3 install ReText
 ```
+# Notebook specific
+
+## Touchpad too sensitive
+
+```bash
+sudo apt-get purge xserver-xorg-input-synaptics
+sudo apt-get install xserver-xorg-input-libinput
+```
+
 

@@ -1,5 +1,7 @@
 source ~/dotfiles/func.zsh
 
+# Oh My Zsh Setup:
+export ZSH=~/dotfiles/.oh-my-zsh
 ZSH_CUSTOM=~/dotfiles/zsh_custom
 ZSH_THEME="jonasleft"
 

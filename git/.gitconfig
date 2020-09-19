@@ -1,6 +1,3 @@
-# include this git config in your main '.gitconfig' file like this:
-#[include]
-#  path = dotfiles/.gitconfig
 
 [core]
   editor = vim
@@ -55,3 +52,7 @@
   prompt = false
   # be able to abort all diffs with :cq
   trustExitcode =true
+
+[include]
+  path = ~/.gitconfig.local
+
