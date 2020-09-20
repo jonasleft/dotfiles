@@ -1,7 +1,3 @@
-" source in main vimrc with: 'so ~/dotfiles/.vimrc'
-" clone vundle with:
-" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
 set nocompatible
 filetype off
 
@@ -24,30 +20,25 @@ syntax on
 "set statusline+=%{FugitiveStatusline()}\ \|
 "set statusline+=\ %l,%c
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
-Plugin 'SirVer/ultisnips'
-Plugin 'scrooloose/nerdtree'
-"Plugin 'altercation/vim-colors-solarized'
-Plugin 'lifepillar/vim-solarized8'
-Plugin 'digitaltoad/vim-pug'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'tpope/vim-surround'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'vimwiki/vimwiki'
-Plugin 'arcticicestudio/nord-vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'tpope/vim-unimpaired'
-"Plugin 'jonasleft/psi-epics.vim'
-call vundle#end()
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'SirVer/ultisnips'
+Plug 'scrooloose/nerdtree'
+"Plug 'altercation/vim-colors-solarized'
+Plug 'lifepillar/vim-solarized8'
+Plug 'digitaltoad/vim-pug'
+Plug 'junegunn/vim-easy-align'
+Plug 'tpope/vim-surround'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'vimwiki/vimwiki'
+Plug 'arcticicestudio/nord-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'tpope/vim-unimpaired'
+"Plug 'jonasleft/psi-epics.vim'
+call plug#end()
 filetype plugin indent on
 
 " Colorscheme, settings needed because of terminals
@@ -68,7 +59,7 @@ set termguicolors
 "set background=dark
 
 "colorscheme solarized8
-colorscheme nord
+silent! colorscheme nord
 "let g:solarized_termcolors=256
 
 
