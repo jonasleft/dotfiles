@@ -7,6 +7,20 @@ ZSH_THEME="jonasleft"
 
 plugins=(git extract jump z fzf)
 
+# fzf setup:
+# ----------
+if [[ ! "$PATH" == */home/purtschert_j/.fzf/bin* ]]; then
+  export PATH="${PATH:+${PATH}:}${HOME}/.fzf/bin"
+fi
+
+# Auto-completion
+[[ $- == *i* ]] && source "${HOME}/.fzf/shell/completion.zsh" 2> /dev/null
+
+# Key bindings
+source "${HOME}/.fzf/shell/key-bindings.zsh"
+
+# oh-my-zsh load:
+# ---------------
 source $ZSH/oh-my-zsh.sh
 
 # ESC Key delay:
@@ -33,3 +47,4 @@ alias v='xclip -selection clipboard -o'
 alias cdv='cd `xclip -selection clipboard -o`'
 # change to git root directory:
 alias cdg='cd $(git rev-parse --show-toplevel)'
+
