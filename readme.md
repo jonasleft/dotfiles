@@ -1,3 +1,11 @@
+# Install
+
+```bash
+git clone https://github.com/jonasleft/dotfiles ~/dotfiles
+cd ~/dotfiles
+. ./bootstrap.sh
+```
+
 # Themes
 ## Terminal
 * nord-xfce-terminal:  https://github.com/arcticicestudio/nord-xfce-terminal
@@ -17,26 +25,8 @@ cd nord-xfce-terminal
 * XFCE terminal default: DejaVu Sans Mono Book 9
 
 
-# ZSH
-
-**Example Config of ~/.zshrc:**
-
-```bash
-source ~/dotfiles/.zshrc
-
-```
-
-
-
 # Additional Tools/Software
 
-## Shell
-
-### Fuzzy Finder
-```bash
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
-```
 
 ## Markdown Viewer
 
@@ -48,7 +38,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 sudo python3 -m pip install pyqt5==5.14  # ubuntu 18.04 reports error if version is not specified...?
 pip3 install ReText
 ```
-# Notebook specific
+# Notebook Zbook G5 specific
 
 ## Touchpad too sensitive
 
@@ -56,5 +46,3 @@ pip3 install ReText
 sudo apt-get purge xserver-xorg-input-synaptics
 sudo apt-get install xserver-xorg-input-libinput
 ```
-
-
