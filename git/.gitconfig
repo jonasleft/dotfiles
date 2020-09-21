@@ -56,3 +56,10 @@
 [include]
   path = ~/.gitconfig.local
 
+# Local Git Config settings:
+# -------------------------
+# Put user specific settings in a  ~/.gitconfig.local file. e.g.:
+#
+# [user]
+#   name = username
+#   email = mailadress
