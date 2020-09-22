@@ -143,8 +143,7 @@ set clipboard=unnamed
 " vimwiki settings:
 " -----------------
 let g:vimwiki_list = [
-                      \{'path': '~/dotfiles/vimwiki'},
-                      \{'path': '~/psi_dotfiles/vimwiki'}
+                      \{'path': '~/dotfiles/vimwiki', 'syntax': 'markdown', 'ext': '.md'},
                       \]
 
 " Macros
