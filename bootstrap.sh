@@ -1,6 +1,16 @@
 #!/bin/bash
 
+# install packages:
+sudo apt install -y stow fonts-hack-ttf git vim tmux ripgrep
+
+#xfce nord colorscheme:
+mkdir -p ~/.local/share/xfce4/terminal/colorschemes
+cp xfce/nord-xfce-terminal/src/nord.theme ~/.local/share/xfce4/terminal/colorschemes/
+
+# stow behavior:
 stow stow
+
+# git config:
 stow git
 
 # zsh:
