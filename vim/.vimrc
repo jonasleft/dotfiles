@@ -159,3 +159,11 @@ let @i = 'yiwjciw0'
 set listchars=tab:>~,nbsp:_,trail:.
 set list
 
+" Function to source only if file exists
+function! SourceIfExists(file)
+  if filereadable(expand(a:file))
+    exe 'source' a:file
+  endif
+endfunction
+
+call SourceIfExists("$HOME/.vimrc.local")
