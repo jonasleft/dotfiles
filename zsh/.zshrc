@@ -48,3 +48,5 @@ alias cdv='cd `xclip -selection clipboard -o`'
 # change to git root directory:
 alias cdg='cd $(git rev-parse --show-toplevel)'
 
+source ${HOME}/.zshrc.local
+
