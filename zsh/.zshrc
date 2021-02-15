@@ -33,7 +33,16 @@ KEYTIMEOUT=1
 eval $(dircolors ~/.dir_colors)
 
 # change capslock to esc key:
-setxkbmap -option caps:escape
+#setxkbmap -option caps:escape
+#
+
+# ------------------------------------
+# ZSH Extension
+# ------------------------------------
+autoload zmv
+alias zmv='noglob zmv'
+alias zcp='noglob zmv -C'
+
 # ------------------------------------
 # Aliases:
 # ------------------------------------
