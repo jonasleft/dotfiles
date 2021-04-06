@@ -5,7 +5,7 @@ export ZSH=~/dotfiles/zsh/.oh-my-zsh
 ZSH_CUSTOM=~/dotfiles/zsh/zsh_custom
 ZSH_THEME="jonasleft"
 
-plugins=(git extract jump z fzf)
+plugins=(git extract jump z fzf colored-man-pages k)
 
 # fzf setup:
 # ----------

@@ -14,6 +14,8 @@ stow stow
 stow git
 
 # zsh:
+mkdir ~/dotfiles/zsh/zsh_custom/plugins
+git clone --depth 1 https://github.com/supercrabtree/k ~/dotfiles/zsh/zsh_custom/plugins/k
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --bin
 stow zsh

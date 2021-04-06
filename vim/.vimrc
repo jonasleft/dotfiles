@@ -166,4 +166,7 @@ function! SourceIfExists(file)
   endif
 endfunction
 
+" Syntax highlights:
+autocmd BufNewFile,BufRead *.do set syntax=tcl
+
 call SourceIfExists("$HOME/.vimrc.local")
