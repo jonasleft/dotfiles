@@ -52,6 +52,13 @@
   * examine the staged changes:         `git diff --cached`
   * undo the merge (even if ff)         `git merge --abort`
 
+== LFS Git Large File Storage ==
+  1. `git lfs install`          Must be done only on first time using LFS
+  2. `git lfs track "*.bin"`    Only with new files
+  3. `git add .gitattributes`  only once
+  4. After that, the *.bin file be added and updated like any other
+
+
 = Links =
  * https://chris.beams.io/posts/git-commit/
  * 

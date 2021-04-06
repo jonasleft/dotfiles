@@ -10,6 +10,13 @@ PARAMBASE_APPL
 * SwissFEL IOC: S30-CVME-DBPM4103
 * Test Stand IOC: MTEST-VME-DIAG17
 
+* UARTLITE:
+```
+mkdir -p /sys/kernel/config/device-tree/overlays/uart
+cat uartlite.dtbo > /sys/kernel/config/device-tree/overlays/uart/dtbo
+```
+/dev/ttyUL1 / UL2
+
 == Xilinx HW Server ==
  * pc8791 (swissFEL)
  * pc6601 (?)
@@ -22,3 +29,26 @@ PARAMBASE_APPL
 - Prepare for swissFEL test (records, firmware package)
 - Run Test on multiple DBPM3s 
 
+== interrupts xilinx ==
+
+APU IRQs: TRM table 35-5
+* (port 0, 8 interrupts:) 89 - 96
+* (port 1, 8 interrupts:) 104 - 111
+
+0 89
+1 90
+2 91
+3 92
+4 93
+5 94
+6 95
+7 96
+
+8  104
+9  105
+10 106
+11 107
+12 108
+13 109
+14 110
+15 111
