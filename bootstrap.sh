@@ -5,7 +5,7 @@ sudo apt install -y stow fonts-hack-ttf git vim tmux ripgrep
 
 #xfce nord colorscheme:
 mkdir -p ~/.local/share/xfce4/terminal/colorschemes
-cp xfce/nord-xfce-terminal/src/nord.theme ~/.local/share/xfce4/terminal/colorschemes/
+cp -v xfce/nord-xfce-terminal/src/nord.theme ~/.local/share/xfce4/terminal/colorschemes/
 
 # stow behavior:
 stow stow
@@ -13,14 +13,31 @@ stow stow
 # git config:
 stow git
 
+# Create local config files if not exist:
+touch ~/zshrc.local
+
 # zsh:
-mkdir ~/dotfiles/zsh/zsh_custom/plugins
-git clone --depth 1 https://github.com/supercrabtree/k ~/dotfiles/zsh/zsh_custom/plugins/k
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+# -------------
+# k - the better l
+mkdir -p ~/dotfiles/zsh/zsh_custom/plugins
+dest=~/dotfiles/zsh/zsh_custom/plugins/k 
+if [ -d $dest ]; then
+  git --git-dir ${dest}/.git pull
+else
+  git clone --depth 1 https://github.com/supercrabtree/k $dest
+fi
+
+# fzf
+if [ -d ~/.fzf ]; then
+  git --git-dir ~/.fzf/.git pull
+else
+  git clone --depth 1 https://github.com/supercrabtree/k ~/.fzf
+fi
 ~/.fzf/install --bin
 stow zsh
 
-#Vim:
+# Vim:
+# -------------
 mkdir -p ~/.vim/autoload
 curl -fLo ~/dotfiles/vim/.vim/autoload/plug.vim \
   --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -28,6 +45,7 @@ vim +'PlugInstall --sync' +'qa!'
 stow vim
 
 # Tmux:
+# -------------
 mkdir -p ~/.tmux/plugins
 stow tmux
 
