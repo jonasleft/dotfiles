@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install packages:
-sudo apt install -y stow fonts-hack-ttf git vim-gtk tmux ripgrep curl
+sudo apt install -y stow fonts-hack-ttf git vim-gtk tmux ripgrep curl zsh
 
 #xfce nord colorscheme:
 mkdir -p ~/.local/share/xfce4/terminal/colorschemes
@@ -14,10 +14,15 @@ stow stow
 stow git
 
 # Create local config files if not exist:
-touch ~/zshrc.local
+touch ~/.zshrc.local
 
 # zsh:
 # -------------
+echo "set default shell to zsh:"
+sudo chsh -s /bin/zsh root
+sudo chsh -s /bin/zsh $USER
+
+
 # k - the better l
 mkdir -p ~/dotfiles/zsh/zsh_custom/plugins
 dest=~/dotfiles/zsh/zsh_custom/plugins/k 
@@ -31,7 +36,7 @@ fi
 if [ -d ~/.fzf ]; then
   git --git-dir ~/.fzf/.git pull
 else
-  git clone --depth 1 https://github.com/supercrabtree/k ~/.fzf
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 fi
 ~/.fzf/install --bin
 stow zsh
