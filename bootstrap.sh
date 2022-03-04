@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install packages:
-sudo apt install -y stow fonts-hack-ttf git vim tmux ripgrep
+sudo apt install -y stow fonts-hack-ttf git vim-gtk tmux ripgrep curl
 
 #xfce nord colorscheme:
 mkdir -p ~/.local/share/xfce4/terminal/colorschemes
@@ -41,8 +41,8 @@ stow zsh
 mkdir -p ~/.vim/autoload
 curl -fLo ~/dotfiles/vim/.vim/autoload/plug.vim \
   --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-vim +'PlugInstall --sync' +'qa!'
 stow vim
+vim +'PlugInstall --sync' +'qa!'
 
 # Tmux:
 # -------------
