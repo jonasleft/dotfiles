@@ -1,11 +1,55 @@
-source ~/dotfiles/zsh/func.zsh
+# Load Plugins:
+source ${HOME}/dotfiles/zsh/plugins/zshmarks/zshmarks.plugin.zsh
+
+source ${HOME}/dotfiles/zsh/func.zsh
+source ${HOME}/dotfiles/zsh/git.zsh
+source ${HOME}/dotfiles/zsh/prompt.zsh
+source ${HOME}/dotfiles/zsh/keybindings.zsh
+
+
+
+# Notes: https://thevaluable.dev/zsh-install-configure-mouseless/
+#
+export EDITOR="vim"
+export VISUAL="vim"
+
+# Prompt
+# ---------------------
+setopt promptsubst
+
+# History
+# ---------------------
+export HISTFILE="$HOME/.zhistory"    # History filepath
+export HISTSIZE=10000                   # Maximum events for internal history
+export SAVEHIST=10000                   # Maximum events in history file
+
+setopt extended_history       # record timestamp of command in HISTFILE
+setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE                                                                        
+setopt hist_ignore_dups       # ignore duplicated commands history list
+setopt hist_ignore_space      # ignore commands that start with space
+setopt hist_verify            # show command with history expansion to user before running it
+setopt share_history          # share command history data
+
+# ZSH Completion System
+# ---------------------
+ autoload -U compinit; compinit
+ _comp_options+=(globdots)
+ setopt MENU_COMPLETE        # Automatically highlight first element of completion menu
+ setopt AUTO_LIST            # Automatically list choices on ambiguous completion.
+ setopt COMPLETE_IN_WORD     # Complete from both ends of a word.
+ setopt AUTO_CD               # Change directory without 'cd'
+
+
+# Zstyle completion patterns:
+source ~/dotfiles/zsh/completion.zsh
 
 # Oh My Zsh Setup:
-export ZSH=~/dotfiles/zsh/.oh-my-zsh
-ZSH_CUSTOM=~/dotfiles/zsh/zsh_custom
-ZSH_THEME="jonasleft"
-
-plugins=(git extract jump z fzf colored-man-pages k)
+#
+#export ZSH=~/dotfiles/zsh/.oh-my-zsh
+#ZSH_CUSTOM=~/dotfiles/zsh/zsh_custom
+#ZSH_THEME="jonasleft"
+#
+#plugins=(git extract jump z fzf colored-man-pages k)
 
 # fzf setup:
 # ----------
@@ -21,7 +65,7 @@ source "${HOME}/.fzf/shell/key-bindings.zsh"
 
 # oh-my-zsh load:
 # ---------------
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 
 # ESC Key delay:
 KEYTIMEOUT=1
@@ -56,6 +100,14 @@ alias v='xclip -selection clipboard -o'
 alias cdv='cd `xclip -selection clipboard -o`'
 # change to git root directory:
 alias cdg='cd $(git rev-parse --show-toplevel)'
+
+alias l='ls -lah'
+
+# Vimwiki:
+alias wiki="vim -c ':VimwikiIndex'"
+
+# Bookmark Plugin:
+alias mark='bookmark'
 
 source ${HOME}/.zshrc.local
 
