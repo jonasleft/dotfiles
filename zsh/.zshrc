@@ -101,7 +101,8 @@ alias cdv='cd `xclip -selection clipboard -o`'
 # change to git root directory:
 alias cdg='cd $(git rev-parse --show-toplevel)'
 
-alias l='ls -lah'
+alias ls='ls --color=auto'
+alias l='ls -lah --color=auto'
 
 # Vimwiki:
 alias wiki="vim -c ':VimwikiIndex'"
