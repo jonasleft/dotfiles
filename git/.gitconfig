@@ -52,6 +52,8 @@
   prompt = false
   # be able to abort all diffs with :cq
   trustExitcode =true
+[pull]
+  ff = only  # fast forward merge only on pull
 
 [include]
   path = ~/.gitconfig.local
