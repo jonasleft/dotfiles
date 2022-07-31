@@ -34,22 +34,13 @@ setopt share_history          # share command history data
 # ---------------------
  autoload -U compinit; compinit
  _comp_options+=(globdots)
- setopt MENU_COMPLETE        # Automatically highlight first element of completion menu
+# setopt MENU_COMPLETE        # Automatically highlight first element of completion menu
  setopt AUTO_LIST            # Automatically list choices on ambiguous completion.
  setopt COMPLETE_IN_WORD     # Complete from both ends of a word.
  setopt AUTO_CD               # Change directory without 'cd'
 
-
 # Zstyle completion patterns:
 source ~/dotfiles/zsh/completion.zsh
-
-# Oh My Zsh Setup:
-#
-#export ZSH=~/dotfiles/zsh/.oh-my-zsh
-#ZSH_CUSTOM=~/dotfiles/zsh/zsh_custom
-#ZSH_THEME="jonasleft"
-#
-#plugins=(git extract jump z fzf colored-man-pages k)
 
 # fzf setup:
 # ----------
@@ -63,15 +54,8 @@ fi
 # Key bindings
 source "${HOME}/.fzf/shell/key-bindings.zsh"
 
-# oh-my-zsh load:
-# ---------------
-#source $ZSH/oh-my-zsh.sh
-
 # ESC Key delay:
 KEYTIMEOUT=1
-
-# enable vi mode (already enabled with ohmyzsh plugins):
-#bindkey -v
 
 # load nord theme dir colords:
 eval $(dircolors ~/.dir_colors)
