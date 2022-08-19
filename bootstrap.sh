@@ -4,8 +4,8 @@
 sudo apt install -y stow fonts-hack-ttf git vim-gtk tmux ripgrep curl zsh
 
 #xfce nord colorscheme:
-mkdir -p ~/.local/share/xfce4/terminal/colorschemes
-cp -v xfce/nord-xfce-terminal/src/nord.theme ~/.local/share/xfce4/terminal/colorschemes/
+#mkdir -p ~/.local/share/xfce4/terminal/colorschemes
+#cp -v xfce/nord-xfce-terminal/src/nord.theme ~/.local/share/xfce4/terminal/colorschemes/
 
 # stow behavior:
 stow stow
@@ -51,6 +51,5 @@ vim +'PlugInstall --sync' +'qa!'
 
 # Tmux:
 # -------------
-mkdir -p ~/.tmux/plugins
 stow tmux
 

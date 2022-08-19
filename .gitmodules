@@ -1,6 +1,3 @@
-[submodule "tmux/.tmux/plugins/nord-tmux"]
-	path = tmux/.tmux/plugins/nord-tmux
-	url = https://github.com/arcticicestudio/nord-tmux.git
 [submodule "xfce/nord-xfce-terminal"]
 	path = xfce/nord-xfce-terminal
 	url = https://github.com/arcticicestudio/nord-xfce-terminal.git
