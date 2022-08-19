@@ -33,7 +33,7 @@ setopt share_history          # share command history data
 # ZSH Completion System
 # ---------------------
  autoload -U compinit; compinit
- _comp_options+=(globdots)
+# _comp_options+=(globdots)   # dont do this...
 # setopt MENU_COMPLETE        # Automatically highlight first element of completion menu
  setopt AUTO_LIST            # Automatically list choices on ambiguous completion.
  setopt COMPLETE_IN_WORD     # Complete from both ends of a word.
@@ -55,7 +55,7 @@ fi
 source "${HOME}/.fzf/shell/key-bindings.zsh"
 
 # ESC Key delay:
-KEYTIMEOUT=1
+export KEYTIMEOUT=1
 
 # load nord theme dir colords:
 eval $(dircolors ~/.dir_colors)
@@ -87,6 +87,7 @@ alias cdg='cd $(git rev-parse --show-toplevel)'
 
 alias ls='ls --color=auto'
 alias l='ls -lah --color=auto'
+alias ll='ls -lah --color=auto'
 
 # Vimwiki:
 alias wiki="vim -c ':VimwikiIndex'"

@@ -11,7 +11,8 @@ zstyle ':completion:*' list-colors 'rs=0' 'di=01;34' 'ln=01;36' 'mh=00' 'pi=40;3
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle '*' single-ignored show
-zstyle ':completion:*' special-dirs true
+zstyle ':completion:*' special-dirs false   # adds . and .. 
+zstyle ':completion:*' file-patterns '%p(D):globbed-files *(D-/):directories' '*(D):all-files'
 zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
 zstyle -e :url-quote-magic url-globbers $'zmodload -i zsh/parameter;\n\t reply=( noglob\n\t\t ${(k)galiases[(R)(* |)(noglob|urlglobber|globurl) *]:-}\n\t\t ${(k)aliases[(R)(* |)(noglob|urlglobber|globurl) *]:-} )'
 zstyle :urlglobber url-local-schema ftp file
