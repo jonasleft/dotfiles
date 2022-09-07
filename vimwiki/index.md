@@ -10,8 +10,12 @@
 * [[vimwiki_cheatsheet]]
 * [vim](vim)
 * [shell](shell)
-* [KVM](KVM)
 * [zsh](zsh)
+
+# Virtualization
+* [KVM](KVM)
+* [gnome boxes](gnome-boxes)
+
 
 # Homelab
 
