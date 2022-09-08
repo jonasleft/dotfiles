@@ -1,7 +1,10 @@
 #!/bin/bash
 
+# switch to home directory
+cd
+
 # install packages:
-sudo apt install -y stow fonts-hack-ttf git vim-gtk tmux ripgrep curl zsh
+sudo apt install -y stow git vim-gtk tmux ripgrep curl zsh alacritty
 
 #xfce nord colorscheme:
 #mkdir -p ~/.local/share/xfce4/terminal/colorschemes
@@ -12,9 +15,7 @@ stow stow
 
 # git config:
 stow git
-
-# Create local config files if not exist:
-touch ~/.zshrc.local
+touch ~/.gitconfig.local
 
 # zsh:
 # -------------
@@ -22,15 +23,8 @@ echo "set default shell to zsh:"
 sudo chsh -s /bin/zsh root
 sudo chsh -s /bin/zsh $USER
 
-
-# k - the better l
-mkdir -p ~/dotfiles/zsh/zsh_custom/plugins
-dest=~/dotfiles/zsh/zsh_custom/plugins/k 
-if [ -d $dest ]; then
-  git --git-dir ${dest}/.git pull
-else
-  git clone --depth 1 https://github.com/supercrabtree/k $dest
-fi
+# Create local config files if not exist:
+touch ~/.zshrc.local
 
 # fzf
 if [ -d ~/.fzf ]; then
@@ -39,6 +33,7 @@ else
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 fi
 ~/.fzf/install --bin
+
 stow zsh
 
 # Vim:
@@ -57,3 +52,12 @@ stow tmux
 # -------------
 stow alacritty
 
+
+# k - the better l
+#mkdir -p ~/dotfiles/zsh/zsh_custom/plugins
+#dest=~/dotfiles/zsh/zsh_custom/plugins/k 
+#if [ -d $dest ]; then
+#  git --git-dir ${dest}/.git pull
+#else
+#  git clone --depth 1 https://github.com/supercrabtree/k $dest
+#fi
