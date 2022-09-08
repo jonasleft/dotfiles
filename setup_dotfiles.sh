@@ -1,6 +1,9 @@
 #!/bin/bash
 
 # install packages:
+echo "* APT"
+echo "**************"
+
 sudo apt update
 sudo apt install -y stow git vim-gtk tmux ripgrep curl zsh alacritty
 
@@ -12,11 +15,13 @@ sudo apt install -y stow git vim-gtk tmux ripgrep curl zsh alacritty
 stow stow
 
 # git config:
+echo "* Git"
+echo "**************"
 stow git
 touch ~/.gitconfig.local
 
-# zsh:
-# -------------
+echo "* ZSH"
+echo "**************"
 echo "set default shell to zsh:"
 sudo chsh -s /bin/zsh root
 sudo chsh -s /bin/zsh $USER
@@ -34,22 +39,26 @@ fi
 
 stow zsh
 
-# Vim:
-# -------------
+echo "* Vim"
+echo "**************"
 mkdir -p ~/.vim/autoload
 curl -fLo ~/dotfiles/vim/.vim/autoload/plug.vim \
   --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 stow vim
 vim +'PlugInstall --sync' +'qa!'
 
-# Tmux:
-# -------------
+echo "* Tmux"
+echo "**************"
 stow tmux
 
-# Alacritty:
-# -------------
+echo "* Alactritty"
+echo "**************"
 stow alacritty
 
+
+echo "**************"
+echo "*    DONE    *"
+echo "**************"
 
 # k - the better l
 #mkdir -p ~/dotfiles/zsh/zsh_custom/plugins
