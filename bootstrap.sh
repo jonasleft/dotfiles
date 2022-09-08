@@ -53,3 +53,7 @@ vim +'PlugInstall --sync' +'qa!'
 # -------------
 stow tmux
 
+# Alacritty:
+# -------------
+stow alacritty
+
