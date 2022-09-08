@@ -5,7 +5,7 @@ echo "* APT"
 echo "**************"
 
 sudo apt update
-sudo apt install -y stow git vim-gtk tmux ripgrep curl zsh alacritty
+sudo apt install -y stow git vim-gtk tmux ripgrep curl zsh alacritty neofetch
 
 #xfce nord colorscheme:
 #mkdir -p ~/.local/share/xfce4/terminal/colorschemes
