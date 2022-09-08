@@ -4,10 +4,6 @@
 sudo apt update
 sudo apt install -y stow git vim-gtk tmux ripgrep curl zsh alacritty
 
-# Clone repo:
-git clone --recursive https://github.com/jonasleft/dotfiles.git $HOME/dotfiles
-cd $HOME/dotfiles
-
 #xfce nord colorscheme:
 #mkdir -p ~/.local/share/xfce4/terminal/colorschemes
 #cp -v xfce/nord-xfce-terminal/src/nord.theme ~/.local/share/xfce4/terminal/colorschemes/
