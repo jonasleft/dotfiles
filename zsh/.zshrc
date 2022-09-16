@@ -1,5 +1,5 @@
 # Load Plugins:
-source ${HOME}/dotfiles/zsh/plugins/zshmarks/zshmarks.plugin.zsh
+autoload -U compinit; compinit
 
 source ${HOME}/dotfiles/zsh/func.zsh
 source ${HOME}/dotfiles/zsh/git.zsh
@@ -32,7 +32,6 @@ setopt share_history          # share command history data
 
 # ZSH Completion System
 # ---------------------
- autoload -U compinit; compinit
 # _comp_options+=(globdots)   # dont do this...
 # setopt MENU_COMPLETE        # Automatically highlight first element of completion menu
  setopt AUTO_LIST            # Automatically list choices on ambiguous completion.
@@ -65,6 +64,11 @@ eval $(dircolors ~/.dir_colors)
 #
 
 # ------------------------------------
+# ZSH Plugin: fzf-marks
+# ------------------------------------
+source ${HOME}/dotfiles/zsh/plugins/fzf-marks/fzf-marks.plugin.zsh
+
+# ------------------------------------
 # ZSH Extension
 # ------------------------------------
 autoload zmv
@@ -91,9 +95,6 @@ alias ll='ls -lah --color=auto'
 
 # Vimwiki:
 alias wiki="vim -c ':VimwikiIndex'"
-
-# Bookmark Plugin:
-alias mark='bookmark'
 
 source ${HOME}/.zshrc.local
 
