@@ -1,10 +1,11 @@
+# ZSH - z shell
 
-= Shortcuts =
+## Shortcuts
 ESC + .     Last argument of previous command
 CTRL + U    Clears line
 CTRL + L    Clear screen
 
-= Special =
+## Special 
 !^      first argument
 !$      last argument
 !*      all arguments

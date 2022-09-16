@@ -142,6 +142,7 @@ set clipboard=unnamed
 
 " vimwiki settings:
 " -----------------
+" Select wiki with <leader>ws
 let g:vimwiki_list = [
                       \{'path': '~/dotfiles/vimwiki', 'syntax': 'markdown', 'ext': '.md'},
                       \]

@@ -1,9 +1,6 @@
-[submodule "zsh/.oh-my-zsh"]
-	path = zsh/.oh-my-zsh
-	url = https://github.com/ohmyzsh/ohmyzsh.git
-[submodule "tmux/.tmux/plugins/nord-tmux"]
-	path = tmux/.tmux/plugins/nord-tmux
-	url = https://github.com/arcticicestudio/nord-tmux.git
 [submodule "xfce/nord-xfce-terminal"]
 	path = xfce/nord-xfce-terminal
 	url = https://github.com/arcticicestudio/nord-xfce-terminal.git
+[submodule "zsh/plugins/zshmarks"]
+	path = zsh/plugins/zshmarks
+	url = https://github.com/jocelynmallon/zshmarks.git
