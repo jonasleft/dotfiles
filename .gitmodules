@@ -1,6 +1,6 @@
 [submodule "xfce/nord-xfce-terminal"]
 	path = xfce/nord-xfce-terminal
 	url = https://github.com/arcticicestudio/nord-xfce-terminal.git
-[submodule "zsh/plugins/zshmarks"]
-	path = zsh/plugins/zshmarks
-	url = https://github.com/jocelynmallon/zshmarks.git
+[submodule "zsh/plugins/fzf-marks"]
+	path = zsh/plugins/fzf-marks
+	url = git@github.com:urbainvaes/fzf-marks.git

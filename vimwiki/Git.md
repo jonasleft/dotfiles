@@ -46,6 +46,15 @@
  * update all to repo hash:     `git submodule update`
 
 ## Remove submodule 
+
+* `git rm <submodule>`
+* additional steps, for local repo if desired:
+  * `rm -rf .git/modules/<submodule>`
+  * `git config --remove-section submodule.<submodule>`
+
+
+### Old procedure:
+
   1. Remove the submodule entry from .git/config:
     `git submodule deinit -f path/to/submodule`
 
