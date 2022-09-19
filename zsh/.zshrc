@@ -1,5 +1,4 @@
 # Load Plugins:
-source ${HOME}/dotfiles/zsh/plugins/zshmarks/zshmarks.plugin.zsh
 
 source ${HOME}/dotfiles/zsh/func.zsh
 source ${HOME}/dotfiles/zsh/git.zsh
