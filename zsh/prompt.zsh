@@ -10,6 +10,7 @@ HOST_PROMPT="%{$fg_bold[yellow]%}$HOST"
 #
 #PROMPT="%(?:%{$fg_bold[green]%}❯:%{$fg_bold[green]%}❯)"
 PROMPT="%(?:%{$fg_bold[green]%}🪐:%{$fg_bold[green]%}🪐)"
+PROMPT="%(?:%{$fg_bold[green]%}▼:%{$fg_bold[green]%}▼)"
 # put it in single quotes, otherwise variables are not updated:
 PROMPT+=' $HOST_PROMPT:%{$fg[cyan]%}%c%{$reset_color%} $(git_prompt)'
 
