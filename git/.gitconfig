@@ -16,7 +16,7 @@
        fzf --print0 -m --preview='git diff --color=always {}' | \
        xargs -0 -t -o git add; \
        }; f"
-  release = describe --abbrev=6 --dirty --always --tags
+  id = describe --abbrev=6 --dirty --always --tags
 
   ls = "ls-tree --full-tree -r --name-only HEAD"
   # print git root directory:
