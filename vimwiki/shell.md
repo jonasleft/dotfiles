@@ -22,6 +22,7 @@
 * in-file replacement: `-i`
 * Cuts header before subst: `sed -e ld -e s/foo/bar/g /tmp/foo` 
 * Extend Config file: `sed -i '/^\[global\]/ a appended-text' asdf.conf`
+* in-file replace string: `sed -i 's/old-text/new-text/g' input.txt`
 
 ## tee
 
@@ -58,6 +59,10 @@ echo {10..1} | tr ' ' '\n' | gnuplot -p -e 'plot "<cat"'
 * simple replace: `rg foo readme.md -r bar`
 * search hidden files: `rg foo --hidden`
 * Case insensitive: `rg foo -i`
+
+## rsync
+
+* rsync files with specific extension: `rsync -a --include '*/' --include '*.mp3' --exclude '*' source/ target/`
 
 # Notes
 

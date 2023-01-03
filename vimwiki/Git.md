@@ -3,6 +3,7 @@
 | `git add --update`              | git add modified files                 |
 | `git checkout <hash> -- <file>` | revert a signel file to a specific rev |
 | `git log -p -- <file>`          | file with diffs for each change        |
+| `git diff <branch> --stat`      | List diff files with stats             |
 
 ## Merge Conflicts 
 

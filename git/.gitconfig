@@ -2,6 +2,7 @@
 [core]
   editor = vim
   excludesfile = ~/.gitignore_global
+
 [alias]
   st = status -s
   co = commit
@@ -10,11 +11,12 @@
   d  = diff
   dt = difftool
   lg = log --decorate --graph --remotes --branches --tags --pretty=tformat:'%C(dim white)%m%C(dim green)%h %C(dim cyan)%cd %C(yellow)%<(12,trunc)%aN %C(reset)%s%C(auto)%w(0,0,9)%+d%C(reset)'
-  fadd = "!f() { \
+  fa = "!f() { \
        git ls-files -m --exclude-standard | \
        fzf --print0 -m --preview='git diff --color=always {}' | \
        xargs -0 -t -o git add; \
        }; f"
+  id = describe --abbrev=6 --dirty --always --tags
 
   ls = "ls-tree --full-tree -r --name-only HEAD"
   # print git root directory:

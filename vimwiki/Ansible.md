@@ -30,6 +30,7 @@ sudo apt install sshpass
 * `ansible all -m gather_facts`
 * with sudo: `ansible all -m apt -a update_cache=true --become --ask-become-pass`
 * Install al updates: `ansible all -m apt -a "upgrade=dist" --become --ask-become-pass`
+* without inventory file: `ansible all -i 'gfa-dsv,' -m gather_facts`
 
 ## playbooks
 ```
