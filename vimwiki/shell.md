@@ -167,3 +167,12 @@ Dublicating File Descriptor: `2>&1`
 
 * `cp file.txt{,.bak}`: create backup copy of file 
 
+# Bash Config Files
+
+Two types of login shells:
+* Interactive / Non-Login Shell: typical bash prompt (terminal windows)
+  * sources `.profile` 
+* Non-Interactive: e.g. bash scripts execution
+  * sources `.bashrc`
+
+  * sources `.profile` 
