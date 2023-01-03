@@ -24,11 +24,25 @@
 * [Ansible](Ansible)
 * [pfsense](pfsense)
  
-# Python
+# Programming Languages
+
+## Python
 
 * [python_qt](python_qt)
 * [Python General](python_general)
 * [Jupyter](Jupyter)
+
+## VHDL
+
+* Verification Libraries:
+  * VUnit: https://github.com/VUnit/vunit
+  * UVVM: https://github.com/UVVM/UVVM
+  * cocotb: https://github.com/cocotb/cocotb
+
+## TCL
+
+* [tcl](tcl)
+
  
 # Apps
 
@@ -37,3 +51,4 @@
 * neofetch - pretty sys info
 * [alacritty](alacritty) - OpenGL Terminal Emulator
 * Shutter - screenshot grab tool with editor
+* [Grip](https://github.com/joeyespo/grip) - GitHub Flavored Markdown Preview
