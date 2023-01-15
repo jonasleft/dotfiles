@@ -1,0 +1,9 @@
+- name: clone dotfiles git repo
+  git:
+    repo: {{ dotfiles_git_repo }}
+    dest: "/home/{{ ansible_user }}/dotfiles"
+
+- name: stow dotfiles
+  shell:
+    cmd: "stow -d $HOME/dotfiles -t $HOME/ {{ item }}"
+  loop: "{{ stow_list }}"

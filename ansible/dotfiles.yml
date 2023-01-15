@@ -1,0 +1,17 @@
+hosts: localhost
+connection: local
+become: true
+vars:
+  - dotfiles_git_repo: "https://github.com/jonasleft/dotfiles.git"
+  - stow_list:
+    - stow
+    - zsh
+    - vim
+    - tmux
+    - alacritty
+
+roles: 
+  - packages
+  - dotfiles
+
+

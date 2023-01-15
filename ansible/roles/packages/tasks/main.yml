@@ -1,0 +1,15 @@
+- name: install packages
+  apt:
+    name:
+    - stow
+    - git
+    - tmux
+    - ripgrep
+    - curl
+    - zsh
+    - neofetch
+    - htop
+    - openssh-server
+    - vim-gtk
+    - ansible
+    state: latest
