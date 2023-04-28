@@ -23,6 +23,7 @@
 * Cuts header before subst: `sed -e ld -e s/foo/bar/g /tmp/foo` 
 * Extend Config file: `sed -i '/^\[global\]/ a appended-text' asdf.conf`
 * in-file replace string: `sed -i 's/old-text/new-text/g' input.txt`
+* do not print automatically, only print match, only on 2nd line: `sed -n '2s/ /    /gp' raw_data.dat`
 
 ## tee
 
@@ -48,7 +49,12 @@
 echo {10..1} | tr ' ' '\n' | gnuplot -p -e 'plot "<cat"' 
 ```
 
-## Grep
+## find
+
+Grep in each vhd file, case insensitive (-i) and print filename (-H):
+* `find . -name "*.vhd"  -exec grep -iH entity {} \;`
+
+## grep
 
 * Recursive search, show line numbers: `grep -rn '/path' -e 'pattern'`
 

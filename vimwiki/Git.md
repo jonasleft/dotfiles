@@ -44,6 +44,13 @@
  * only first time:             `git submodule update --init --recursive`
  * update all to new commits:   `git submodule update --recursive --remote`
  * update all to repo hash:     `git submodule update`
+ * hash of all submodule:       `git submodule --quiet foreach git rev-parse --short HEAD`
+ * display branch names:        `git submodule --quiet foreach 'echo -e $sm_path: `git rev-parse --abbrev-ref HEAD`' | column -t`
+
+## Add Submodule
+
+* track branch: `git submodule add -b <branch-name> <path/url>`
+* track branch, existing submodule: `git submodule set-branch -b  <branch-name> <module-path>`
 
 ## Remove submodule 
 
@@ -74,7 +81,7 @@
   1. `git lfs install`          Must be done only on first time using LFS
   2. `git lfs track "*.bin"`    Only with new files
   3. `git add .gitattributes`  only once
-  4. After that, the *.bin file be added and updated like any other
+  4. After that, the `*.bin` file be added and updated like any other
 
 ## Multiple Remotes
 
@@ -100,6 +107,25 @@
  * https://chris.beams.io/posts/git-commit/
  * 
 
+## Problems
+
+### fetch doesnt get all branches
+
+after a `shallow` clone, the remote might be wrong like:
+```
+$ git config --get remote.origin.fetch
++refs/heads/master:refs/remotes/origin/master
+```
+
+It should be `.../origin/*`.
+
+Fix:
+```
+git remote rm origin
+git remote add origin <git url>
+```
+
+A shallow clone with git `clone --depth <depth> <repo>` implies `--single-branch`, better do it with `git clone --depth <depth> --no-single-branch <repo>`
 
 
 

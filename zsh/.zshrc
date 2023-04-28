@@ -97,6 +97,11 @@ alias ll='ls -lah --color=auto'
 # Vimwiki:
 alias wiki="vim -c ':VimwikiIndex'"
 
+# Git:
+alias gst='git st'
+alias gau='git add -u'
+alias gco='git commit'
+
 source ${HOME}/.zshrc.local
 
 

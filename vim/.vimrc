@@ -155,6 +155,9 @@ let @i = 'yiwjciw0'
 " grep current word from current directory:
 :nnoremap gR :grep "\<<cword>\>" %:p:h/*<CR>
 
+" remove trailing white spaces:
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
 " White spaces
 " ------------
 set listchars=tab:>~,nbsp:_,trail:.

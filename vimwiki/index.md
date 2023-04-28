@@ -52,3 +52,5 @@
 * [alacritty](alacritty) - OpenGL Terminal Emulator
 * Shutter - screenshot grab tool with editor
 * [Grip](https://github.com/joeyespo/grip) - GitHub Flavored Markdown Preview
+* meld - GUI diff tool (dirs diff) for linux
+* diffpdf - PDF diff

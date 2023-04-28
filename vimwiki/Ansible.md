@@ -47,3 +47,9 @@ ansible_ssh_pass=root
 DBPM3-RR82-0
 ```
 
+# Ansible Pull
+
+* Requirements: `sudo apt install ansible git`
+* Example: `sudo ansible-pull -U https://git.psi.ch/purtschert_j/ansible_linux_setup.git --extra-vars "psi_user=purtschert_j"`
+
+

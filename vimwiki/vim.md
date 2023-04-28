@@ -10,12 +10,13 @@
 | diff update           | `:diffupdate`     |
 | next/previous diff    | `[c` / `]c`       |
 
-## Search / Replace
+## Substitute: Search / Replace
 
 | Function                     | command          |
 | -------                      | -------          |
 | Search/Replace complete file | `:%s/old/new/g`  |
 | same with confirmation       | `:%s/old/new/gc` |
+| Substitute last search pattern | `:%s//new/g` |
 
 **Regular expression quantifier:**  
 
@@ -27,9 +28,11 @@
 
 ## Tricks
 
-| Command | Mode            | Description                 |
-| ------- | -------         | -----                       |
-| !!      | Normal Mode     | Insert shell command output |
+| Command | Mode        | Description                                      |
+| ------- | -------     | -----                                            |
+| !!      | Normal Mode | Insert shell command output                      |
+| CTRL-O  | Insert Mode | Entering command-mode command inside insert mode |
+|         |             |                                                  |
 
 
 # Swap ESC/CapsLock

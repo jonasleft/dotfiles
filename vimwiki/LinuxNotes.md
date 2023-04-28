@@ -29,4 +29,8 @@ setxkbmap -option caps:escape
 ## System Log
 
 * `dmesg -wH`
-* 
+
+## Systems Hang after closing Lid HP Notebook
+
+systemctl disable nvidia-hibernate.service nvidia-resume.service nvidia-suspend.service
+
